@@ -23,6 +23,11 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  font-family: "Mozilla Text", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
 }
 
 .dark-desk {
@@ -38,6 +43,7 @@ body {
 }
 
 .header {
+    height: 100px;
     display: flex;
     flex-direction: row ;
     justify-content: space-between;
@@ -45,12 +51,57 @@ body {
     padding: 20px;
 }
 
+.header-logo {
+    height: 25px;
+}
+
+.header-link {
+    text-decoration: none;
+    color: var(--primary-black);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header-link:hover {
+    color: var(--primary-purple);
+}
+
+.header-btn-outline {
+    border: 2px solid var(--primary-black);
+    color: var(--primary-black);
+    border-radius: 25px;
+    padding: 8px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.header-btn-outline:hover {
+    background-color: var(--primary-black);
+    color: var(--primary-white);
+}
+
+.header-btn-dark {
+    background-color: var(--primary-black);
+    color: var(--primary-white);
+    border-radius: 25px;
+    padding: 8px 25px;
+    font-weight: 500;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.header-btn-dark:hover {
+    background-color: #2a2666;
+    color: var(--primary-white);
+}
+
 .footer {
     background-color: var(--primary-black);
     color: var(--primary-white);
     /* padding: 40px 20px; */
     text-align: center;
-    
+
     bottom:0;
     width: 100%;
 }
