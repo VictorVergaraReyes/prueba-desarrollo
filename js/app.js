@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const components = [
         { id: 'header-component', path: 'components/header.html' },
         { id: 'hero-component', path: 'components/hero.html' },
+        { id: 'institutions-component', path: 'components/institutions.html' },
         { id: 'form-component', path: 'components/form.html' },        
         { id: 'footer-component', path: 'components/footer.html' },
         { id: 'contactanos-component', path: 'components/buttons/contactanos.html' }
