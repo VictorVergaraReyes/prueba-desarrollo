@@ -1,0 +1,10 @@
+<section>
+    <button 
+        x-data="customButton({ variant: 'primary', size: 'lg' })"
+        :class="classes"
+        :disabled="disabled || loading"
+        >
+        <span x-show="!loading">Guardar</span>
+        <span x-show="loading">Cargando...</span>
+    </button>
+</section>

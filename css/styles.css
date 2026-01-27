@@ -1,0 +1,36 @@
+:root {
+    --primary-black: #110E3D;
+    --primary-white: #FFFFFF;
+    --primary-beige: #F3F3E8;
+    --primary-purple: #A476FF;
+    --primary-yellow: #F1EA88;
+    --primary-blue: #0ECADD;
+    --primary-gray: #888888;
+    --primary-light-gray: #F3F3E8;
+    --success: #76C928;
+    --error: #E20038;
+    --warning: #FFAE00;
+}
+
+body {
+  background: radial-gradient(
+    circle at center,
+    #f5f3e8 0%,
+    #e8e3f0 30%,
+    #c8b8e8 60%,
+    #9b7ed8 100%
+  );
+  min-height: 100vh;
+}
+
+dark-desk {
+  background: radial-gradient(
+    ellipse at bottom center,
+    #7c5ba6 0%,
+    #4a4478 20%,
+    #2d3561 40%,
+    #1a2344 60%,
+    #0f1628 100%
+  );
+  min-height: 100vh;
+}

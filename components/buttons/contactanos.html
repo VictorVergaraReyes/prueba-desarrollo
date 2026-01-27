@@ -1,0 +1,44 @@
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('customButton', (config = {}) => ({
+    variant: config.variant || 'primary',
+    size: config.size || 'md',
+    disabled: config.disabled || false,
+    loading: config.loading || false,
+    
+    get classes() {
+      const variants = {
+        primary: 'bg-blue-600 hover:bg-blue-700 text-white',
+        secondary: 'bg-gray-600 hover:bg-gray-700 text-white',
+        danger: 'bg-red-600 hover:bg-red-700 text-white',
+        success: 'bg-green-600 hover:bg-green-700 text-white'
+      };
+      
+      const sizes = {
+        sm: 'px-3 py-1 text-sm',
+        md: 'px-4 py-2 text-base',
+        lg: 'px-6 py-3 text-lg'
+      };
+      
+      return `${variants[this.variant]} ${sizes[this.size]} rounded transition-colors`;
+    }
+  }));
+});
+</script>
+
+<!-- Usar el componente -->
+<button 
+  x-data="customButton({ variant: 'primary', size: 'lg' })"
+  :class="classes"
+  :disabled="disabled || loading"
+>
+  <span x-show="!loading">Guardar</span>
+  <span x-show="loading">Cargando...</span>
+</button>
+
+<button 
+  x-data="customButton({ variant: 'danger', size: 'sm' })"
+  :class="classes"
+>
+  Eliminar
+</button>

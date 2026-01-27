@@ -11,15 +11,56 @@ async function loadComponent(elementId, componentPath) {
 // Load all components when DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {
     const components = [
-        { id: 'navbar-component', path: 'components/navbar.html' },
+        // { id: 'header-component', path: 'components/header.html' },
         { id: 'hero-component', path: 'components/hero.html' },
-        { id: 'services-component', path: 'components/services.html' },
-        { id: 'why-us-component', path: 'components/why-us.html' },
-        { id: 'testimonials-component', path: 'components/testimonials.html' },
-        { id: 'cta-component', path: 'components/cta.html' },
-        { id: 'footer-component', path: 'components/footer.html' }
+        // { id: 'form-component', path: 'components/form.html' },        
+        // { id: 'footer-component', path: 'components/footer.html' },
+        { id: 'contactanos-component', path: 'components/buttons/contactanos.html' }
     ];
 
     // Load all components in parallel
     await Promise.all(components.map(c => loadComponent(c.id, c.path)));
 });
+
+
+document.addEventListener('alpine:init', () => {
+    // Global Store
+    Alpine.store('app', {
+        mobileMenu: false,
+        toggleMenu() {
+            this.mobileMenu = !this.mobileMenu;
+        }
+    });
+
+    // Navbar Component
+    Alpine.data('header', () => ({        }));
+
+    // Hero Component
+    Alpine.data('hero', () => ({
+    }));
+
+    Alpine.data('customButton', (config = {}) => ({
+        variant: config.variant || 'primary',
+        size: config.size || 'md',
+        disabled: config.disabled || false,
+        loading: config.loading || false,
+        
+        get classes() {
+        const variants = {
+            primary: 'bg-blue-600 hover:bg-blue-700 text-white',
+            secondary: 'bg-gray-600 hover:bg-gray-700 text-white',
+            danger: 'bg-red-600 hover:bg-red-700 text-white',
+            success: 'bg-green-600 hover:bg-green-700 text-white'
+        };
+        
+        const sizes = {
+            sm: 'px-3 py-1 text-sm',
+            md: 'px-4 py-2 text-base',
+            lg: 'px-6 py-3 text-lg'
+        };
+        
+        return `${variants[this.variant]} ${sizes[this.size]} rounded transition-colors`;
+        }
+    }));
+});
+
