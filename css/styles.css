@@ -21,9 +21,11 @@ body {
     #9b7ed8 100%
   );
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-dark-desk {
+.dark-desk {
   background: radial-gradient(
     ellipse at bottom center,
     #7c5ba6 0%,
@@ -33,4 +35,22 @@ dark-desk {
     #0f1628 100%
   );
   min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer {
+    background-color: var(--primary-black);
+    color: var(--primary-white);
+    /* padding: 40px 20px; */
+    text-align: center;
+    
+    bottom:0;
+    width: 100%;
 }

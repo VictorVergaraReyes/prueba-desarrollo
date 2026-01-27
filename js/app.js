@@ -11,10 +11,10 @@ async function loadComponent(elementId, componentPath) {
 // Load all components when DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {
     const components = [
-        // { id: 'header-component', path: 'components/header.html' },
+        { id: 'header-component', path: 'components/header.html' },
         { id: 'hero-component', path: 'components/hero.html' },
-        // { id: 'form-component', path: 'components/form.html' },        
-        // { id: 'footer-component', path: 'components/footer.html' },
+        { id: 'form-component', path: 'components/form.html' },        
+        { id: 'footer-component', path: 'components/footer.html' },
         { id: 'contactanos-component', path: 'components/buttons/contactanos.html' }
     ];
 
