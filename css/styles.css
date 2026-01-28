@@ -527,7 +527,7 @@ body {
 /* Institutions Slider Animation */
 
 .institutions-section {
-  padding: 0 1.5rem 0 1.5rem;
+  padding: 40px 1.5rem 0 1.5rem;
 }
 
 @keyframes slideLeft {
