@@ -40,6 +40,23 @@ document.addEventListener('alpine:init', () => {
     Alpine.data('hero', () => ({
     }));
 
+    Alpine.data('institutions', () => ({
+        isPlaying: true,
+        speed: 15,
+
+        toggleAnimation() {
+            this.isPlaying = !this.isPlaying;
+        },
+
+        setSpeed(newSpeed) {
+            this.speed = newSpeed;
+        },
+
+        get animationStyle() {
+            return this.isPlaying ? `animation-duration: ${this.speed}s;` : 'animation-play-state: paused;';
+        }
+    }));
+
     Alpine.data('customButton', (config = {}) => ({
         variant: config.variant || 'primary',
         size: config.size || 'md',

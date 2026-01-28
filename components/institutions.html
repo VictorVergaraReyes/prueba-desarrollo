@@ -1,46 +1,82 @@
 <section class="institutions-section">
-    <p>Instituciones y empresas que forman parte del ecosistema Ginia</p>
-    <div class="container">
-        <div class="row">
-            
-                <div class="col-1">
-                    <img src="assets/slider-logos/original/conalep.svg" alt="conalep logo">
-                </div>
-                <div class="col-1">
-                    <img src="assets/slider-logos/original/millet.svg" alt="millet logo">
-                </div>
-                <div class="col-1">
-                    <img src="assets/slider-logos/original/asso.svg" alt="asso logo">
-                </div>
-                <div class="col-1">
-                    <img src="assets/slider-logos/original/bachilleres.svg" alt="bachilleres logo">
-                </div>
-                <div class="col-1">
-                    <img src="assets/slider-logos/original/bepensa.svg" alt="bepensa logo">
-                </div>
-                <div class="col-1">
-                    <img src="assets/slider-logos/original/fundacion-donde.svg" alt="fundacion-donde logo">
-                </div>
-                <div class="col-1">
-                    <img src="assets/slider-logos/original/galletas-donde.svg" alt="galletas-donde logo">
-                </div>
-                <div class="col-1">
-                    <img src="assets/slider-logos/original/medamedia.svg" alt="medamedia logo">
-                </div>
+    <h2 class="text-h2">Instituciones y empresas que forman parte del ecosistema Ginia</h2>
+    <div class="slider-wrapper" x-data="institutions" @mouseenter="toggleAnimation()" @mouseleave="toggleAnimation()">
+        <div class="slider-track" :style="animationStyle">
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/conalep.svg" alt="conalep logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/millet.svg" alt="millet logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/asso.svg" alt="asso logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/bachilleres.svg" alt="bachilleres logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/bepensa.svg" alt="bepensa logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/fundacion-donde.svg" alt="fundacion-donde logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/galletas-donde.svg" alt="galletas-donde logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/medamedia.svg" alt="medamedia logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/mitza.svg" alt="mitza logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/palace.svg" alt="palace logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/patron.svg" alt="patron logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/dgeti.svg" alt="dgeti logo">
+            </div>
 
-                <div class="col-1">
-                    <img src="assets/slider-logos/original/mitza.svg" alt="mitza logo">
-                </div>
-                <div class="col-1">
-                    <img src="assets/slider-logos/original/palace.svg" alt="palace logo">
-                </div>
-                <div class="col-1">
-                    <img src="assets/slider-logos/original/patron.svg" alt="patron logo">
-                </div>
-                <div class="col-1">
-                    <img src="assets/slider-logos/original/dgeti.svg" alt="dgeti logo">
-                </div>
+            <!-- Duplicated logos for infinite loop -->
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/conalep.svg" alt="conalep logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/millet.svg" alt="millet logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/asso.svg" alt="asso logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/bachilleres.svg" alt="bachilleres logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/bepensa.svg" alt="bepensa logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/fundacion-donde.svg" alt="fundacion-donde logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/galletas-donde.svg" alt="galletas-donde logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/medamedia.svg" alt="medamedia logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/mitza.svg" alt="mitza logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/palace.svg" alt="palace logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/patron.svg" alt="patron logo">
+            </div>
+            <div class="slider-item">
+                <img src="assets/slider-logos/original/dgeti.svg" alt="dgeti logo">
+            </div>
         </div>
     </div>
-    
+
 </section>
