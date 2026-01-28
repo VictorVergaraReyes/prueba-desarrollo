@@ -30,6 +30,7 @@ body {
   font-optical-sizing: auto;
   /* font-weight: <weight>; */
   font-style: normal;
+  color: var(--primary-black);
   /* padding: 0px 80px 0px 80px; */
 }
 
@@ -256,7 +257,7 @@ body {
 
 /* Hero Collage Styles */
 .hero-collage {
-  min-height: 500px;
+  min-height: 433px;
 }
 
 .hero-image-container {
