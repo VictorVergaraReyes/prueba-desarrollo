@@ -120,6 +120,21 @@ body {
     color: var(--primary-white);
 }
 
+.header-btn-purple {
+    background-color: var(--primary-purple);
+    color: var(--primary-white);
+    border-radius: 25px;
+    padding: 8px 25px;
+    font-weight: 500;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.header-btn-purple:hover {
+    background-color: #8d5dd9;
+    color: var(--primary-white);
+}
+
 .footer {
     background-color: var(--primary-black);
     color: var(--primary-white);
