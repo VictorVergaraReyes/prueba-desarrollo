@@ -13,31 +13,34 @@
 
             <!-- Right Side -->
             <div class="col-lg-6 form-right">
-                <form>
+                <form id="contactForm">
                     <!-- Full Name -->
                     <div class="form-group">
-                        <label class="form-label">Nombre completo</label>
-                        <input type="text" class="form-control" placeholder="¿Cómo te llamas?">
+                        <label class="form-label" for="fullName">Nombre completo</label>
+                        <input type="text" id="fullName" name="fullName" class="form-control" placeholder="¿Cómo te llamas?">
+                        <span class="error-message" id="fullName-error"></span>
                     </div>
 
                     <!-- Email and Phone Row -->
                     <div class="form-row-2">
                         <div class="form-group">
-                            <label class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" placeholder="¿A qué correo te escribimos?">
+                            <label class="form-label" for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="¿A qué correo te escribimos?">
+                            <span class="error-message" id="email-error"></span>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Teléfono</label>
-                            <input type="tel" class="form-control" placeholder="¿Cuál es tu número?">
+                            <label class="form-label" for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="¿Cuál es tu número?">
+                            <span class="error-message" id="phone-error"></span>
                         </div>
                     </div>
 
                     <!-- State and City Row -->
                     <div class="form-row-2">
                         <div class="form-group">
-                            <label class="form-label">Estado</label>
-                            <select class="form-select">
-                                <option selected disabled>Selecciona tu estado</option>
+                            <label class="form-label" for="state">Estado</label>
+                            <select id="state" name="state" class="form-select">
+                                <option selected disabled value="">Selecciona tu estado</option>
                                 <option>Aguascalientes</option>
                                 <option>Baja California</option>
                                 <option>Baja California Sur</option>
@@ -71,12 +74,24 @@
                                 <option>Yucatán</option>
                                 <option>Zacatecas</option>
                             </select>
+                            <span class="error-message" id="state-error"></span>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Ciudad</label>
-                            <select class="form-select">
-                                <option selected disabled>Selecciona la ciudad donde nos contactas</option>
+                            <label class="form-label" for="city">Ciudad</label>
+                            <select id="city" name="city" class="form-select">
+                                <option selected disabled value="">Selecciona la ciudad donde nos contactas</option>
+                                <option>México</option>
+                                <option>Guadalajara</option>
+                                <option>Monterrey</option>
+                                <option>Cancún</option>
+                                <option>Querétaro</option>
+                                <option>Playa del Carmen</option>
+                                <option>Puebla</option>
+                                <option>León</option>
+                                <option>Toluca</option>
+                                <option>Tijuana</option>
                             </select>
+                            <span class="error-message" id="city-error"></span>
                         </div>
                     </div>
 
@@ -103,17 +118,19 @@
                                 </label>
                             </div>
                         </div>
+                        <span class="error-message" id="profile-error"></span>
                     </div>
 
                     <!-- Message -->
                     <div class="form-group">
-                        <label class="form-label">Mensaje</label>
-                        <textarea class="form-control"
+                        <label class="form-label" for="message">Mensaje</label>
+                        <textarea id="message" name="message" class="form-control"
                             placeholder="Cuéntanos cómo quieres colaborar con Ginia"></textarea>
+                        <span class="error-message" id="message-error"></span>
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit" class="btn btn-dark">Hablemos hoy mismo</button>
+                    <button type="submit" class="btn btn-dark" id="submitBtn">Hablemos hoy mismo</button>
                 </form>
             </div>
         </div>
