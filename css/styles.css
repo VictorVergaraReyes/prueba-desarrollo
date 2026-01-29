@@ -101,7 +101,7 @@ body {
 }
 
 .header-btn-outline:hover {
-    background-color: var(--primary-black);
+    border: 2px solid var(--primary-white);
     color: var(--primary-white);
 }
 
@@ -153,21 +153,19 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 123px;
-    height: 117px;
+    width: auto;
+    height: 73px;
 }
 
 .footer-logo {
-    height: 117px;
-    width: 123px;
+    height: 100%;
+    width: auto;
     object-fit: contain;
 }
 
 .footer-nav {
     position: absolute;
-    left: calc(25% + 45px);
-    top: 40px;
-    width: 148px;
+    
 }
 
 .footer-contact {
@@ -272,6 +270,11 @@ body {
     font-weight: 500;
     border: none;
     transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: var(--primary-purple);
+    color: var(--primary-white);
 }
 
 .border-right {
@@ -601,4 +604,9 @@ body {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+
+.footer-main{
+  height: 73px;
+  overflow: hidden;
 }
