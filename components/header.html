@@ -1,22 +1,45 @@
 <section class="header">
     <div class="container">
-        <div class="row d-flex justify-content-between align-items-center" >                        
+        <div class="row d-flex justify-content-between align-items-center" >
 
             <!-- Navigation Links -->
-            <div class="col-7 d-flex flex-row justify-content-between">
+            <div class="col-7 d-flex flex-row justify-content-between header-nav-container">
                 <img src="assets/icons/logo.svg" alt="Logo Ginia" class="header-logo">
-                <div style="flex-direction: row; display: flex; justify-content: space-between; width: 455px;" >
+                <div class="header-links-wrapper">
                     <a href="#" class="header-link">Instituciones educativas</a>
                     <a href="#" class="header-link">Empresas</a>
                     <a href="#" class="header-link">Nosotros</a>
-                </div>                
+                </div>
+
+                <!-- Hamburger Menu -->
+                <button class="header-hamburger" id="headerHamburger" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
 
             <!-- Action Buttons -->
-            <div class="col-4 d-flex justify-content-between" >
+            <div class="col-4 d-flex justify-content-between header-buttons-container" >
                 <button class="btn header-btn-outline">Inicia sesión</button>
                 <button class="btn btn-dark">Contáctanos</button>
             </div>
         </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="header-mobile-menu" id="headerMobileMenu">
+            <a href="#" class="header-link">Instituciones educativas</a>
+            <a href="#" class="header-link">Empresas</a>
+            <a href="#" class="header-link">Nosotros</a>
+        </div>
     </div>
 </section>
+
+<script>
+document.getElementById('headerHamburger').addEventListener('click', function() {
+    const menu = document.getElementById('headerMobileMenu');
+    const hamburger = this;
+    menu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+});
+</script>
