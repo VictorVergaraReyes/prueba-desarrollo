@@ -11,8 +11,9 @@
 
 @media (max-width: 576px) {
     .hero-container {
-        margin-left: 1rem;
-        overflow: hidden;
+        
+        overflow: visible;
+        height: 274px;
     }
 }
 
@@ -51,7 +52,7 @@
 
 @media (min-width: 1400px) {
     .alert-badge-top {
-        transform: translate(calc(-50% - 13vw), calc(-50% - 14vw));
+        
         font-size: 1.2vw;
         min-width: 9vw;
     }
@@ -348,15 +349,13 @@
 @media (min-width: 992px) {
     .office-woman-image {
         aspect-ratio: auto;
-        overflow: hidden;
-        /* transform: translate(calc(-50% - 7rem), calc(-50% - 4.5rem)); */
+        overflow: hidden;        
         height: 11.25rem;
     }
 }
 
 @media (min-width: 1400px) {
     .office-woman-image {
-        transform: translate(calc(-50% - 10vw), calc(-50% - 6vw));
         height: 15vw;
         border-radius: 1.5vw;
     }
