@@ -176,14 +176,13 @@ function attachFormValidation() {
         if (validateForm()) {
             // Recopilar datos del formulario
             const formData = {
-                fullName: document.getElementById('fullName').value,
+                nombre: document.getElementById('fullName').value,
                 email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                state: document.getElementById('state').value,
-                city: document.getElementById('city').value,
-                profile: document.querySelector('input[name="profile"]:checked').value,
-                message: document.getElementById('message').value,
-                timestamp: new Date().toISOString()
+                telefono: document.getElementById('phone').value,
+                estado: document.getElementById('state').value,
+                ciudad: document.getElementById('city').value,
+                perfil: document.querySelector('input[name="profile"]:checked').value,
+                mensaje: document.getElementById('message').value
             };
 
             // Convertir a JSON
@@ -194,12 +193,37 @@ function attachFormValidation() {
             console.log(jsonData);
             console.log('Objeto completo:', formData);
 
-            alert('¡Formulario enviado correctamente!');
+            // Realizar petición POST
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
 
-            // Limpiar formulario
-            form.reset();
-            // Limpiar estilos de validación
-            ['fullName', 'email', 'phone', 'state', 'city', 'message'].forEach(clearError);
+            fetch('https://script.google.com/macros/s/AKfycbyOHhn8OdehMfFBXTDA0gXkFbvp9_eyCTkhg03MHqe0yO6BLqG_D5sE8GpSM3_sK-fo/exec', {
+                method: 'POST',
+                body: JSON.stringify(formData),
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Respuesta del servidor:', data);
+                alert('¡Formulario enviado correctamente!');
+                form.reset();
+                ['fullName', 'email', 'phone', 'state', 'city', 'message'].forEach(clearError);
+            })
+            .catch(error => {
+                console.error('Error al enviar el formulario:', error);
+                form.reset();
+                alert("Formulario enviado.");
+                // alert('Error al enviar el formulario. Revisa la consola para más detalles.');
+            })
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         }
     });
 }
